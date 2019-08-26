@@ -1,3 +1,3 @@
 #!/bin/bash
-cut -d, -f9,10 ~/chou_lab/EVE/test_filtered.csv
-cut -d, -f13 ~/chou_lab/EVE/test_filtered.csv > test_names.csv
+bedtools getfasta -fi ../data/I_scapularis/GCA_0002086
+15.1_JCVI_ISG_i3_1.0_genomic.fna -bed ./bed_files/test.bed -fo test_EVEs.fasta
