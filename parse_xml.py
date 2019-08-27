@@ -1,5 +1,4 @@
 # adapted from https://github.com/AnneliektH/EVEs_arthropod/blob/master/parse_xml.py
-from __future__ import division
 from Bio.Blast import NCBIXML
 import csv
 import sys
@@ -57,7 +56,7 @@ with open(output,'w') as f:
   f.close()
   result.close()
 
-df = df = pd.read_csv(output)
+df =  pd.read_csv(output)
 # max eval on position_on_query_start is equal
 max_eval = df.groupby(['sequence', 'position_on_query_start']).evalue.transform(max)
 df4 = df[df.evalue == max_eval]
