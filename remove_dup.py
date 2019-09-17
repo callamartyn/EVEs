@@ -2,7 +2,8 @@ import sys
 import pandas as pd
 
 #read in BLAST result csv
-df = pd.read_csv(sys.argv[1])
+rownames = ['query', 'subject', 'per_id', 'length', 'mismatch', 'gap_open', 'q_start', 'q_end', 's_start', 's_end', 'evalue', 'bitscore']
+df = pd.read_csv(sys.argv[1],sep = '\t', header=None, names = rownames)
 
 # first remove sequences with the same start and end position
 def remove_dup(df):
